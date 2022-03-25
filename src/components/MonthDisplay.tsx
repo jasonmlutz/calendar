@@ -58,9 +58,23 @@ function MonthDisplay() {
   const [currentMonth, setCurrentMonth] = useState(initialMonth);
   return (
     <div id="Current-month-header" className="flex flex-row justify-around">
-      <div id="Current-month-left-nav">previous</div>
+      <div
+        id="Current-month-left-nav"
+        onClick={() => {
+          setCurrentMonth((currentMonth) => incrementMonth(currentMonth, -1));
+        }}
+      >
+        previous
+      </div>
       <div id="Current-month-name">{currentMonth.name}</div>
-      <div id="Current-month-left-nav">next</div>
+      <div
+        id="Current-month-left-nav"
+        onClick={() => {
+          setCurrentMonth((currentMonth) => incrementMonth(currentMonth, 1));
+        }}
+      >
+        next
+      </div>
     </div>
   );
 }

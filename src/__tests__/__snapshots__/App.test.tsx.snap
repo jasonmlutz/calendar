@@ -17,6 +17,7 @@ exports[`renders correctly 1`] = `
   >
     <div
       id="Current-month-left-nav"
+      onClick={[Function]}
     >
       previous
     </div>
@@ -27,6 +28,7 @@ exports[`renders correctly 1`] = `
     </div>
     <div
       id="Current-month-left-nav"
+      onClick={[Function]}
     >
       next
     </div>
