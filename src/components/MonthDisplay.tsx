@@ -43,6 +43,7 @@ export function generateMonth(index: number): Month {
       name: monthNames[index % 12],
     };
   } else {
+    // we want to treat an input like -1 (or -13) as we would 11
     return generateMonth(12 + index);
   }
 }
@@ -55,7 +56,13 @@ export function incrementMonth(currentMonth: Month, change: number): Month {
 function MonthDisplay() {
   let initialMonth: Month = { index: 0, name: "January" };
   const [currentMonth, setCurrentMonth] = useState(initialMonth);
-  return <div id="Current-month">{currentMonth.name}</div>;
+  return (
+    <div id="Current-month-header" className="flex flex-row justify-around">
+      <div id="Current-month-left-nav">previous</div>
+      <div id="Current-month-name">{currentMonth.name}</div>
+      <div id="Current-month-left-nav">next</div>
+    </div>
+  );
 }
 
 export default MonthDisplay;

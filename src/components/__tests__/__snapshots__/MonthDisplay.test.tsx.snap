@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="flex flex-row justify-around"
+  id="Current-month-header"
+>
+  <div
+    id="Current-month-left-nav"
+  >
+    previous
+  </div>
+  <div
+    id="Current-month-name"
+  >
+    January
+  </div>
+  <div
+    id="Current-month-left-nav"
+  >
+    next
+  </div>
+</div>
+`;
