@@ -58,25 +58,25 @@ function MonthDisplay() {
   let initialMonth: Month = { index: 0, name: "January" };
   const [currentMonth, setCurrentMonth] = useState(initialMonth);
   return (
-    <div id="Current-month-header" className="flex flex-row justify-around">
-      <div
-        id="Current-month-left-nav"
+    <header className="flex flex-row justify-around">
+      <button
+        className="p-2 bg-white border border-black text-black rounded-md hover:bg-gray-300"
         onClick={() => {
           setCurrentMonth((currentMonth) => incrementMonth(currentMonth, -1));
         }}
       >
-        <BsArrowLeftSquare />
-      </div>
-      <div id="Current-month-name">{currentMonth.name}</div>
-      <div
-        id="Current-month-right-nav"
+        previous
+      </button>
+      <div data-testid="current-month-name">{currentMonth.name}</div>
+      <button
+        className="p-2 bg-white border border-black text-black rounded-md hover:bg-gray-300"
         onClick={() => {
           setCurrentMonth((currentMonth) => incrementMonth(currentMonth, 1));
         }}
       >
-        <BsArrowRightSquare />
-      </div>
-    </div>
+        next
+      </button>
+    </header>
   );
 }
 

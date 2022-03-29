@@ -3,6 +3,7 @@
 import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
+import { screen } from "@testing-library/react";
 
 import MonthDisplay from "../MonthDisplay";
 
@@ -24,7 +25,8 @@ it("renders initial state correctly", () => {
   act(() => {
     render(<MonthDisplay />, container);
   });
-  expect(container.textContent).toBe("January");
+  let monthName = screen.getByTestId("current-month-name");
+  expect(monthName.textContent).toBe("January");
 });
 
 it("correctly increments to next month", () => {
@@ -32,13 +34,15 @@ it("correctly increments to next month", () => {
     render(<MonthDisplay />, container);
   });
   // grab the right-nav button
-  const rightButton = document.querySelector("#Current-month-right-nav > svg");
-  expect(container.textContent).toBe("January");
+  const rightButton = screen.getByRole("button", { name: /next/i });
+  let monthName;
+  monthName = screen.getByTestId("current-month-name");
+  expect(monthName.textContent).toBe("January");
   act(() => {
     rightButton.dispatchEvent(new MouseEvent("click", { bubbles: true }));
   });
-
-  expect(container.textContent).toBe("February");
+  monthName = screen.getByTestId("current-month-name");
+  expect(monthName.textContent).toBe("February");
 });
 
 it("correctly increments to previous month", () => {
@@ -46,11 +50,14 @@ it("correctly increments to previous month", () => {
     render(<MonthDisplay />, container);
   });
   // grab the left-nav button
-  const leftButton = document.querySelector("#Current-month-left-nav > svg");
-  expect(container.textContent).toBe("January");
+  const leftButton = screen.getByRole("button", { name: /previous/i });
+  let monthName;
+  monthName = screen.getByTestId("current-month-name");
+  expect(monthName.textContent).toBe("January");
   act(() => {
     leftButton.dispatchEvent(new MouseEvent("click", { bubbles: true }));
   });
 
-  expect(container.textContent).toBe("December");
+  monthName = screen.getByTestId("current-month-name");
+  expect(monthName.textContent).toBe("December");
 });
