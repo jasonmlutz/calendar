@@ -69,7 +69,7 @@ function MonthDisplay() {
       </div>
       <div id="Current-month-name">{currentMonth.name}</div>
       <div
-        id="Current-month-left-nav"
+        id="Current-month-right-nav"
         onClick={() => {
           setCurrentMonth((currentMonth) => incrementMonth(currentMonth, 1));
         }}

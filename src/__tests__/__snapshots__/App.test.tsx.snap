@@ -45,7 +45,7 @@ exports[`renders correctly 1`] = `
       January
     </div>
     <div
-      id="Current-month-left-nav"
+      id="Current-month-right-nav"
       onClick={[Function]}
     >
       <svg
