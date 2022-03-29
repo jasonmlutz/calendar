@@ -5,7 +5,7 @@ import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import { screen } from "@testing-library/react";
 
-import MonthDisplay from "../MonthDisplay";
+import CalendarHeader from "../CalendarHeader";
 
 let container = null;
 beforeEach(() => {
@@ -23,7 +23,7 @@ afterEach(() => {
 
 it("renders initial state correctly", () => {
   act(() => {
-    render(<MonthDisplay />, container);
+    render(<CalendarHeader />, container);
   });
   let monthName = screen.getByTestId("current-month-name");
   expect(monthName.textContent).toBe("January");
@@ -31,7 +31,7 @@ it("renders initial state correctly", () => {
 
 it("correctly increments to next month", () => {
   act(() => {
-    render(<MonthDisplay />, container);
+    render(<CalendarHeader />, container);
   });
   // grab the right-nav button
   const rightButton = screen.getByRole("button", { name: /next/i });
@@ -47,7 +47,7 @@ it("correctly increments to next month", () => {
 
 it("correctly increments to previous month", () => {
   act(() => {
-    render(<MonthDisplay />, container);
+    render(<CalendarHeader />, container);
   });
   // grab the left-nav button
   const leftButton = screen.getByRole("button", { name: /previous/i });

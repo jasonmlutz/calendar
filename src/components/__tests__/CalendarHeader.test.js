@@ -1,5 +1,5 @@
 import renderer from "react-test-renderer";
-import MonthDisplay, { generateMonth } from "../MonthDisplay";
+import CalendarHeader, { generateMonth } from "../CalendarHeader";
 
 it("generateMonth: properly assigns month", () => {
   expect(generateMonth(0)).toEqual({ index: 0, name: "January" });
@@ -16,6 +16,6 @@ it("generateMonth: handles negative inputs", () => {
 });
 
 it("renders correctly", () => {
-  const tree = renderer.create(<MonthDisplay />).toJSON();
+  const tree = renderer.create(<CalendarHeader />).toJSON();
   expect(tree).toMatchSnapshot();
 });

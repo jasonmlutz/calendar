@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<header
+<div
   className="flex flex-row justify-around"
 >
   <button
@@ -21,5 +21,5 @@ exports[`renders correctly 1`] = `
   >
     next
   </button>
-</header>
+</div>
 `;

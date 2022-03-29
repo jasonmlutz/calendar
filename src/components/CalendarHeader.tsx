@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BsArrowRightSquare, BsArrowLeftSquare } from "react-icons/bs";
 
 type MonthName = Readonly<
   | "January"
@@ -58,7 +57,7 @@ function MonthDisplay() {
   let initialMonth: Month = { index: 0, name: "January" };
   const [currentMonth, setCurrentMonth] = useState(initialMonth);
   return (
-    <header className="flex flex-row justify-around">
+    <div className="flex flex-row justify-around">
       <button
         className="p-2 bg-white border border-black text-black rounded-md hover:bg-gray-300"
         onClick={() => {
@@ -76,7 +75,7 @@ function MonthDisplay() {
       >
         next
       </button>
-    </header>
+    </div>
   );
 }
 

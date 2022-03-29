@@ -11,26 +11,30 @@ exports[`renders correctly 1`] = `
   >
     Calendar App
   </header>
-  <header
-    className="flex flex-row justify-around"
+  <div
+    id="Calendar-header"
   >
-    <button
-      className="p-2 bg-white border border-black text-black rounded-md hover:bg-gray-300"
-      onClick={[Function]}
-    >
-      previous
-    </button>
     <div
-      data-testid="current-month-name"
+      className="flex flex-row justify-around"
     >
-      January
+      <button
+        className="p-2 bg-white border border-black text-black rounded-md hover:bg-gray-300"
+        onClick={[Function]}
+      >
+        previous
+      </button>
+      <div
+        data-testid="current-month-name"
+      >
+        January
+      </div>
+      <button
+        className="p-2 bg-white border border-black text-black rounded-md hover:bg-gray-300"
+        onClick={[Function]}
+      >
+        next
+      </button>
     </div>
-    <button
-      className="p-2 bg-white border border-black text-black rounded-md hover:bg-gray-300"
-      onClick={[Function]}
-    >
-      next
-    </button>
-  </header>
+  </div>
 </div>
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import MonthDisplay from "./components/MonthDisplay";
+import CalendarHeader from "./components/CalendarHeader";
 
 function App() {
   return (
@@ -7,7 +7,9 @@ function App() {
       <header id="App-header" className="py-2 text-center text-2xl md:text-3xl">
         Calendar App
       </header>
-      <MonthDisplay />
+      <div id="Calendar-header">
+        <CalendarHeader />
+      </div>
     </div>
   );
 }
