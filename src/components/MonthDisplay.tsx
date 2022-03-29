@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BsArrowRightSquare, BsArrowLeftSquare } from "react-icons/bs";
 
 type MonthName = Readonly<
   | "January"
@@ -64,7 +65,7 @@ function MonthDisplay() {
           setCurrentMonth((currentMonth) => incrementMonth(currentMonth, -1));
         }}
       >
-        previous
+        <BsArrowLeftSquare />
       </div>
       <div id="Current-month-name">{currentMonth.name}</div>
       <div
@@ -73,7 +74,7 @@ function MonthDisplay() {
           setCurrentMonth((currentMonth) => incrementMonth(currentMonth, 1));
         }}
       >
-        next
+        <BsArrowRightSquare />
       </div>
     </div>
   );
