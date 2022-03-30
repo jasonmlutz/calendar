@@ -1,5 +1,6 @@
 import React from "react";
 import CalendarHeader from "./components/CalendarHeader";
+import DayNameDisplay from "./components/DayNameDisplay";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       </header>
       <div id="Calendar-header">
         <CalendarHeader />
+        <DayNameDisplay />
       </div>
     </div>
   );

@@ -35,6 +35,31 @@ exports[`renders correctly 1`] = `
         next
       </button>
     </div>
+    <ul
+      className="flex flex-row justify-between"
+    >
+      <li>
+        Sunday
+      </li>
+      <li>
+        Monday
+      </li>
+      <li>
+        Tuesday
+      </li>
+      <li>
+        Wednesday
+      </li>
+      <li>
+        Thursday
+      </li>
+      <li>
+        Friday
+      </li>
+      <li>
+        Saturday
+      </li>
+    </ul>
   </div>
 </div>
 `;
